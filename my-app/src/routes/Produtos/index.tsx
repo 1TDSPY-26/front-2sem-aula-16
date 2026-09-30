@@ -59,7 +59,7 @@ export default function Produtos() {
             <h2>Produtos</h2>
 
             <div>
-                <table border={1} style={{margin:"0 auto",borderCollapse:"collapse",borderWidth:"2px",borderColor:"#0000ff"}}>
+                <table className="tbProduto">
 
                     <thead>
                         <tr>
@@ -78,7 +78,7 @@ export default function Produtos() {
                                 <td>{p.nome}</td>
                                 <td>{p.preco}</td>
                                 <td>{p.estoque}</td>
-                                <td>
+                                <td className="acoes">
                                     <Link to={`/editar-produtos/${p.id}`}> <Editar /> </Link> /
                                     <Link to="#" onClick={() => handleDelete(p.id)}><Excluir /></Link>
                                 </td>
