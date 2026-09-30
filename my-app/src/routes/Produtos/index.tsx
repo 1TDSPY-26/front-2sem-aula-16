@@ -28,6 +28,7 @@ export default function Produtos() {
 
             } catch (error) {
                 console.error(error);
+
             }
 
         }
@@ -100,7 +101,7 @@ export default function Produtos() {
                 </table>
             </div>
 
-
+            <h1>Página de Produtos</h1>
         </main>
     );
 }
