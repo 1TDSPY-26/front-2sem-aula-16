@@ -5,7 +5,7 @@ export default function Menu() {
         <nav>
             <Link to="/">Home</Link>{" | "}
             <Link to="/produtos">Produtos</Link>{" | "}
-            {/* <Link to="/editar-produtos">Editar Produtos</Link> */}
+            <Link to="/cadastro">Cadastro de Produto</Link> {" | "}
         </nav>
     );
 }
