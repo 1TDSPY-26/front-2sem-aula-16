@@ -1,11 +1,38 @@
 import { useState } from "react";
 import type { TipoProduto } from "../../types/types";
+import { useNavigate } from "react-router";
 
 export default function CadProduto() {
 
+    const navigate = useNavigate();
+
     const[produto,setProduto] = useState<TipoProduto>({id:"",nome:"",preco:0,estoque:0});
 
-    
+    const handlePost = async ()=>{
+        try {
+            
+            const response = await fetch("http://localhost:3001/produtos/", {
+                method: "POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify(produto)
+            });
+
+            if(!response.ok){
+                throw Error(`Ocorreu um erro no cadastro do produto: ${response.status} - ${response.statusText}`);
+            }
+
+            //Mensagem de sucesso
+            alert("Produto cadastrado com sucesso!");
+
+            //Redirecionamento
+            navigate("/produtos");
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     return (
         <main>
@@ -27,7 +54,7 @@ export default function CadProduto() {
                             <input type="number" step={1} name="estoque" id="estoque" value={produto.estoque} onChange={(e) => setProduto({ ...produto, estoque: parseInt(e.target.value) })} />
                         </div>
                         <div>
-                            <button type="button">CADASTRAR</button>
+                            <button type="button" onClick={()=> handlePost()}>CADASTRAR</button>
                         </div>
 
                     </fieldset>

@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import type { TipoProduto } from "../../types/types";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import { FaRegEdit as Editar } from "react-icons/fa";
 import { MdDeleteForever as Excluir } from "react-icons/md";
 
-
 export default function Produtos() {
-
-    const navigate = useNavigate();
 
     const [produtos, setProdutos] = useState<TipoProduto[]>([]);
 
@@ -36,9 +33,7 @@ export default function Produtos() {
 
     }, []);
 
-
     const handleDelete = async (id: string) => {
-
 
         try {
 
@@ -64,7 +59,7 @@ export default function Produtos() {
             <h2>Produtos</h2>
 
             <div>
-                <table border={1}>
+                <table border={1} style={{margin:"0 auto",borderCollapse:"collapse",borderWidth:"2px",borderColor:"#0000ff"}}>
 
                     <thead>
                         <tr>
@@ -99,7 +94,6 @@ export default function Produtos() {
 
                 </table>
             </div>
-
 
         </main>
     );
