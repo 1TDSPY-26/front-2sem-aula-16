@@ -2,21 +2,45 @@
   "produtos": [
     {
       "id": "1",
-      "nome": "Notebook",
-      "preco": "3500",
-      "estoque": "9"
-    },
-    {
-      "id": "2",
       "nome": "Mouse",
       "preco": 120,
       "estoque": 25
     },
     {
-      "id": "3",
+      "id": "2",
       "nome": "Teclado",
       "preco": 210,
       "estoque": 8
+    },
+    {
+      "id": "3",
+      "nome": "Cadeira Ergonomica",
+      "preco": 650,
+      "estoque": 10
+    },
+    {
+      "id": "4",
+      "nome": "MousePad",
+      "preco": 95,
+      "estoque": 15
+    },
+    {
+      "id": "5",
+      "nome": "Notebook",
+      "preco": 3599.9,
+      "estoque": 10
+    },
+    {
+      "id": "6",
+      "nome": "Gabinete",
+      "preco": 300,
+      "estoque": 5
+    },
+    {
+      "id": "Al62buUIVVo",
+      "nome": "Tablet",
+      "preco": 2800,
+      "estoque": 10
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
